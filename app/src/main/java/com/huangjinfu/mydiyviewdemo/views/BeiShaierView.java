@@ -41,6 +41,9 @@ public class BeiShaierView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
 
+
+
+
         centerX = w/2;
         centerY = h/2;
         startX = centerX-250;
