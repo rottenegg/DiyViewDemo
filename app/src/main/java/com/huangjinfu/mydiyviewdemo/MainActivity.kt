@@ -9,8 +9,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        squareView.setOnClickListener {
-            squareView.refreshView(!squareView.isNeedCircle)
+        btn_start.setOnClickListener {
+            squareView.startDraw()
         }
     }
 }
