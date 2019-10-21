@@ -21,5 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="开始"></Button>
+    <Button
+        android:id="@+id/btn_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束"></Button>
 
 </LinearLayout>

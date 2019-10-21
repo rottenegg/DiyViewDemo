@@ -12,5 +12,8 @@ class MainActivity : AppCompatActivity() {
         btn_start.setOnClickListener {
             squareView.startDraw()
         }
+        btn_end.setOnClickListener {
+            squareView.endDraw();
+        }
     }
 }
