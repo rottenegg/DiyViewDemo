@@ -110,7 +110,8 @@ public class DownloadProgressView extends View {
         //view的高
         widgetHeight = MeasureSpec.getSize(heightMeasureSpec);
         Log.e(TAG, "onMeasure");
-        progressWidth = widgetWidth - 2 * ScreenUtils.dip2px(getContext(), 37);
+        //进度条宽度
+        progressWidth = widgetWidth-2*ScreenUtils.dip2px(getContext(),progressMargin)-ScreenUtils.dip2px(getContext(),progressHeight/2);
     }
 
     @Override
@@ -127,7 +128,7 @@ public class DownloadProgressView extends View {
         canvas.drawArc(rightRectf, 270, 180, true, progressPaintCircle);
 
         //显示文字
-        int progress = (int) ( ((float)progressLength /(float) (widgetWidth-2*ScreenUtils.dip2px(getContext(),progressMargin)-ScreenUtils.dip2px(getContext(),progressHeight/2))) * 100);
+        int progress = (int) ( (((float)progressLength /progressWidth)* 100));
         canvas.drawBitmap(bitmap,progressLength+ScreenUtils.dip2px(getContext(),progressMargin)+ScreenUtils.dip2px(getContext(),progressHeight/2)-bitmap.getWidth()/2,widgetHeight/2-ScreenUtils.dip2px(getContext(),progressHeight/2)-bitmap.getHeight()-ScreenUtils.dip2px(getContext(),5),bitmapPaint);
         canvas.drawText(progress+"%",progressLength+ScreenUtils.dip2px(getContext(),progressMargin)+ScreenUtils.dip2px(getContext(),progressHeight/2)-bitmap.getWidth()/4,widgetHeight/2-ScreenUtils.dip2px(getContext(),progressHeight/2)-bitmap.getHeight()/3-ScreenUtils.dip2px(getContext(),6),textPaint);
 
@@ -177,7 +178,7 @@ public class DownloadProgressView extends View {
                         Thread.sleep(10);
                         progressLength++;
                         postInvalidate();
-                        if (progressLength > widgetWidth-2*ScreenUtils.dip2px(getContext(),progressMargin)-ScreenUtils.dip2px(getContext(),progressHeight/2)) {
+                        if (progressLength > progressWidth) {
                             isStop[0] = true;
                         }
                     } catch (InterruptedException e) {

@@ -3,4 +3,11 @@
     <declare-styleable name="TableView">
     <attr name="mb_stockWidth" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="LeftLineTextView">
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="text" format="string" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
 </resources>

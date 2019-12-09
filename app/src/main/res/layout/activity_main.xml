@@ -6,25 +6,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.huangjinfu.mydiyviewdemo.MainActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:background="#ffffff">
-        <com.huangjinfu.mydiyviewdemo.views.DownloadProgressView
-            android:id="@+id/squareView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_start"
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="#ffffff">-->
+<!--        <com.huangjinfu.mydiyviewdemo.views.DownloadProgressView-->
+<!--            android:id="@+id/squareView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp" />-->
+<!--    </LinearLayout>-->
+<!--    <Button-->
+<!--        android:id="@+id/btn_start"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="开始"></Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/btn_end"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="结束"></Button>-->
+    <com.huangjinfu.mydiyviewdemo.views.LeftLineTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="开始"></Button>
-    <Button
-        android:id="@+id/btn_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="结束"></Button>
+        android:textColor="@color/c_222222"
+        android:layout_gravity="center"
+        app:lineHeight="12dp"
+        app:lineWidth="3dp"
+        app:text="1111" />
 
 </LinearLayout>
