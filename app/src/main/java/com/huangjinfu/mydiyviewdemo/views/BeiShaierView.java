@@ -79,6 +79,7 @@ public class BeiShaierView extends View {
         canvas.drawPath(path,paint);
     }
 
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()){
