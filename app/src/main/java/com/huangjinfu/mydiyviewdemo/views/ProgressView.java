@@ -15,6 +15,8 @@ import android.view.View;
 import com.huangjinfu.mydiyviewdemo.R;
 import com.huangjinfu.mydiyviewdemo.utils.ScreenUtils;
 
+import java.util.logging.Handler;
+
 public class ProgressView extends View {
     //控件宽度
     private int widgetWidth;
@@ -84,9 +86,24 @@ public class ProgressView extends View {
         widgetHeight = MeasureSpec.getSize(heightMeasureSpec);
     }
 
-    private void ojbectAnimation(){
-        ObjectAnimator objectAnimator = new ObjectAnimator();
-        objectAnimator.setTr
+    public void startAnimal(){
+        widgetWidth = 0;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (widgetWidth<=800){
+                    widgetWidth++;
+                    postInvalidate();
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        }).start();
     }
+
 
 }

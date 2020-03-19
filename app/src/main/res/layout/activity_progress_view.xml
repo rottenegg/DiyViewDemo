@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.ProgressViewActivity">
-<com.huangjinfu.mydiyviewdemo.views.ProgressView
-    android:id="@+id/progress_view"
-    android:layout_width="match_parent"
-    android:layout_height="10dp"
-    android:background="#262730"/>
+    android:background="#393a40">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:background="@drawable/shape_progress_bg"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:orientation="vertical">-->
+
+        <com.huangjinfu.mydiyviewdemo.views.ProgressNotifyView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+<!--    </LinearLayout>-->
+    <Button
+        android:id="@+id/btn_start_animal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始动画"></Button>
 </LinearLayout>
