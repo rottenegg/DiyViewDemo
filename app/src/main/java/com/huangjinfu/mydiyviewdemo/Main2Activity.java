@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.huangjinfu.mydiyviewdemo.activity.DiyEditTextActivity;
 import com.huangjinfu.mydiyviewdemo.activity.ProgressViewActivity;
 
 public class Main2Activity extends AppCompatActivity {
@@ -17,6 +18,15 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Main2Activity.this, ProgressViewActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        findViewById(R.id.btn_edittext).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main2Activity.this, DiyEditTextActivity.class);
                 startActivity(intent);
 
             }

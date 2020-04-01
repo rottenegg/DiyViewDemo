@@ -18,5 +18,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进度条"></Button>
+    <Button
+        android:id="@+id/btn_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义输入框"></Button>
 
 </LinearLayout>
