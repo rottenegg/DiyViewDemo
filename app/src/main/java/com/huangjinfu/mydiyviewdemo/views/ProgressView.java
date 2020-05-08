@@ -18,6 +18,7 @@ import com.huangjinfu.mydiyviewdemo.utils.ScreenUtils;
 import java.util.logging.Handler;
 
 public class ProgressView extends View {
+    public static final String TAG = "ProgressView";
     //控件宽度
     private int widgetWidth;
     //控件高度
@@ -48,6 +49,7 @@ public class ProgressView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        Log.e(TAG,"onDraw");
         initView();
         drawView(canvas);
     }
@@ -80,10 +82,17 @@ public class ProgressView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Log.e(TAG,"onMeasure");
         //view的宽
         widgetWidth = MeasureSpec.getSize(widthMeasureSpec);
         //view的高
         widgetHeight = MeasureSpec.getSize(heightMeasureSpec);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        Log.e(TAG,"onLayout");
     }
 
     public void startAnimal(){

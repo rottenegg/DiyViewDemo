@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.DiyEditTextActivity">
-<EditText
-    android:id="@+id/et_content"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
